@@ -19,6 +19,12 @@
 				<FormItem label="站点地址" prop="site_url">
 					<Input v-model="base.site_url" search enter-button="确    定" @on-search="cmtSave('site_url')"></Input>
 				</FormItem>
+				<FormItem label="QQ号" prop="qq_number">
+					<Input v-model="base.qq_number" search enter-button="确    定" @on-search="cmtSave('qq_number')"></Input>
+				</FormItem>
+				<FormItem label="小飞机" prop="telegram_number">
+					<Input v-model="base.telegram_number" search enter-button="确    定" @on-search="cmtSave('telegram_number')"></Input>
+				</FormItem>
 				<FormItem label="Favicon" prop="favicon_url">
 					<Input v-model="base.favicon_url" search enter-button="确    定" @on-search="cmtSave('favicon_url')"></Input>
 				</FormItem>

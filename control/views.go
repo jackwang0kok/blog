@@ -34,6 +34,29 @@ func IndexView(ctx echo.Context) error {
 	})
 }
 
+// IndexView 主页面 手机端
+func IndexMobileView(ctx echo.Context) error {
+	//return ctx.HTML(200, `<html><head><meta charset="UTF-8"><title>文档</title></head><body><a href="/swagger/index.html">doc</a></body></html>`)
+	pi, _ := strconv.Atoi(ctx.FormValue("page"))
+	if pi == 0 {
+		pi = 1
+	}
+	ps, _ := atoi(model.MapOpts.MustGet("page_size"), 6)
+	mods, _ := model.PostPage(pi, ps)
+	total := model.PostCount()
+	naver := model.Naver{}
+	if pi > 1 {
+		naver.Prev = "/?page=" + strconv.Itoa(pi-1)
+	}
+	if total > (pi * ps) {
+		naver.Next = "/?page=" + strconv.Itoa(pi+1)
+	}
+	return ctx.Render(http.StatusOK, "m.html", map[string]interface{}{
+		"Posts": mods,
+		"Naver": naver,
+	})
+}
+
 // ArchivesView 归档
 func ArchivesView(ctx echo.Context) error {
 	mods, err := model.PostArchive()

@@ -1,1 +1,271 @@
-<!DOCTYPE html><html lang="zh-CN"><head><title>{{.title}}</title><link rel="canonical" href="{{.site_url}}" />{{template "tpl-linker.html" .}}</head><body>{{template "tpl-naver.html" .}}<div id="main"><section id="page-index">{{ range $k, $v := .Posts }}<article class="post"><div class="meta"><div><span class="author">zxysilent</span><span>发布于</span><span class="date">{{ date $v.CreateTime "2006-01-02" }}</span></div><div class="comment"><a href="/post/{{$v.Path}}.html#comments">comments</a></div></div><h1 class="title"><a href="/post/{{$v.Path}}.html">{{$v.Title}}</a></h1><div class="entry-content">{{ str2html $v.Summary }}<p class="more"><a href="/post/{{$v.Path}}.html">阅读全文 »</a></p></div></article>{{ end }}<nav class="pagination">{{ if ne .Naver.Prev ""}}<a href="{{.Naver.Prev}}" class="prev">&laquo; 上一页</a>{{end}}<div class="center"><a href="/archives">博客归档</a></div>{{ if ne .Naver.Next ""}}<a href="{{.Naver.Next}}" class="next">下一页 &raquo;</a>{{end}}</nav></section>{{template "tpl-footer.html" .}}</body></html>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>{{.title}}官网</title>
+    <link rel="stylesheet" type="text/css" href="./static/base.css">
+    <link rel="stylesheet" type="text/css" href="./static/index.d7e9a5ce03b2937a99c2.css">
+    <link rel="stylesheet" type="text/css" href="./static/style.css">
+    <script type="text/javascript">
+        try {
+            var urlhash = window.location.hash;
+            if (!urlhash.match("fromapp")) {
+                if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i))) {
+                    window.location = "m.html";
+                }
+            }
+        } catch (err) {
+        }
+    </script>
+</head>
+
+<body>
+<div id="wrap">
+    <div class="bg-video"></div>
+    <!-- 视频背景 -->
+    <div bg-video="">
+        <video src="./static/login.mp4" width="100%" height="110%" autoplay="autoplay" loop=""
+               muted="muted" cue-before:none;=""></video>
+    </div>
+    <!-- 主内容部分 -->
+    <div class="main-body">
+        <div class="main-header">
+            <div class="logo"><img src="{{.logo_big_url}}" alt="logo"></div>
+            <div class="nav">
+                <ul>
+                    <li class="item"><a href="{{.site_url}}" target="_blank">点击进入{{.title}}官网</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mobile_box">
+            <div class="logo_two"><img class="mobile_logo" src="{{.logo_small_url}}"></div>
+            <div class="ewm"><span class="title1">诚邀加盟</span> &nbsp; <span class="scan1">体育第一品牌</span><br>
+                <br>
+                <div id="qrcode"><img class="mobile_logo" src="./static/ewm_box.png"></div>
+            </div>
+            <span class="scan1">月均代理分佣</span> <br>
+            <span class="title1">65,900,000+</span>
+            <div class="wrapper"><a href="{{.site_url}}"
+                                    class="fancy-button pop-onhover bg-gradient1"><span>代理加盟</span></a> <br>
+            </div>
+        </div>
+        <img src="./static/bg_down.png" width="1100px" alt="" class="line">
+        <div class="bottom">
+            <div class="bottom_content" onclick="window.open('{{.site_url}}')">
+                <div class="botton_no"><img src="./static/icon-serieatm.png" class="bottom_icon"></div>
+                <div class="botton_no"><img src="./static/icon-bayern.png" class="bottom_icon"></div>
+                <div class="botton_no"><img src="./static/logo-shab.png" class="bottom_icon"></div>
+                <div class="botton_no"><img src="./static/logo-shabba.png" class="bottom_icon"></div>
+                <div class="botton_no"><img src="./static/logo-xiaojin.png" class="bottom_icon"></div>
+                <div class="botton_no"><img src="./static/logo-gaodneg.png" class="bottom_icon"></div>
+                <div class="botton_no"><img src="./static/logo-shuangying.png" class="bottom_icon"></div>
+                <div class="botton_no"><img src="./static/logo-tgc.png" class="bottom_icon"></div>
+                <div class="botton_no"><img src="./static/logo-ebet.png" class="bottom_icon"></div>
+                <div class="botton_no"><img src="./static/logo-pp.png" class="bottom_icon"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="_10IFacP6PnQZbuK0iYHCde">
+    <div class="_1lcTqpDoSv3AsiJAHdyx7S" id="description"
+         style="opacity: 1; animation: _3D5UhZ4SNsFx2wyAfPJzw5 1s forwards;">
+        <h2>应有尽有 享你所想</h2>
+        <h3>加入加盟<span style="color:#f00">{{.title}} 收入高 门槛低</span> 全方位扶持政策为您实现人生理想</h3>
+        <div id="descriptionList" style="transform: translateY(0px);">
+            <p class="_1lYOTpwpYP8e_HmM-h4PB_">渠道扶持<span>根据代理的发展渠道，给予针对性的指导支持，包括渠道指导、经验分享、引流工具、直播号、宣传图片及物料制作等。</span>
+            </p>
+            <p class="_3Ixpcygtt9CbwLXDR3iIMe">
+                新增会员扶持<span>每月制定对应的新增奖励活动,按照有效会员的增量进行奖励，内容包含奖励代理的礼金、奖励会员充值彩金及各类实物礼品等。</span>
+            </p>
+            <p class="_18_hjSFcvCg9XXfpbkh3ZP">代理发展规划扶持<span>根据代理现有发展渠道,提供运营规划建议,提供技术支持以及人脉关系辅助代理快速发展。</span></p>
+
+            <p class="wnqzC90dOuYU1Tr-X7Emn">资金安全<span>平台为代理的佣金和扶持金配置如下两种方式: A)安排大额安全卡进行转账;
+            B)平台旗下拥有多家实业投资公司，代理可自由选择将资金交予平台进行定向或共同投资。</span></p>
+            <p
+                    style="    display: block;    overflow: hidden;    width: 100%; box-shadow: none;   height:10px;    margin: 0;">
+            </p>
+            <table width="100%" cellpadding="1" cellspacing="1" border="0"
+                   style="background: #CCC; color: #000000; font-weight: bold;">
+                <tbody>
+                <tr>
+                    <td height="40" colspan="4" align="center" bgcolor="#597ef7"><span
+                                style="font-size: 20px; color: #FFFFFF; font-weight: bold">佣金比例说明</span></td>
+                </tr>
+                <tr>
+                    <td height="40" align="center" bgcolor="#E2E8FE"><span style="font-weight: bold">级别</span></td>
+                    <td align="center" bgcolor="#E2E8FE"><span style="font-weight: bold">公司本月总盈利(CNY)</span></td>
+                    <td align="center" bgcolor="#E2E8FE"><span style="font-weight: bold">活跃玩家最低要求</span></td>
+                    <td align="center" bgcolor="#E2E8FE"><span style="color: #597ef7; font-weight: bold">佣金百分比</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="40" align="center" bgcolor="#FFFFFF"><span style="font-weight: bold">级别一</span></td>
+                    <td align="center" bgcolor="#FFFFFF">1 - 40,000</td>
+                    <td align="center" bgcolor="#FFFFFF">5</td>
+                    <td align="center" bgcolor="#FFFFFF">30.00 %</td>
+                </tr>
+                <tr>
+                    <td height="40" align="center" bgcolor="#F2F2F2"><span style="font-weight: bold">级别二</span></td>
+                    <td align="center" bgcolor="#F2F2F2">40,001 - 150,000</td>
+                    <td align="center" bgcolor="#F2F2F2">10</td>
+                    <td align="center" bgcolor="#F2F2F2">35.00 %</td>
+                </tr>
+                <tr>
+                    <td height="40" align="center" bgcolor="#FFFFFF"><span style="font-weight: bold">级别三</span></td>
+                    <td align="center" bgcolor="#FFFFFF">150,001 - 300,000</td>
+                    <td align="center" bgcolor="#FFFFFF">15</td>
+                    <td align="center" bgcolor="#FFFFFF">40.00 %</td>
+                </tr>
+                <tr>
+                    <td height="40" align="center" bgcolor="#F2F2F2"><span style="font-weight: bold">级别四</span></td>
+                    <td align="center" bgcolor="#F2F2F2">300,001 - 500,000</td>
+                    <td align="center" bgcolor="#F2F2F2">25</td>
+                    <td align="center" bgcolor="#F2F2F2">45.00 %</td>
+                </tr>
+                <tr>
+                    <td height="40" align="center" bgcolor="#FFFFFF"><span style="font-weight: bold">级别五</span></td>
+                    <td align="center" bgcolor="#FFFFFF">500,001 - 1,000,000</td>
+                    <td align="center" bgcolor="#FFFFFF">35</td>
+                    <td align="center" bgcolor="#FFFFFF">50.00 %</td>
+                </tr>
+                <tr>
+                    <td height="40" align="center" bgcolor="#F2F2F2"><span style="font-weight: bold">级别六</span></td>
+                    <td align="center" bgcolor="#F2F2F2">≥1,000,001</td>
+                    <td align="center" bgcolor="#F2F2F2">50</td>
+                    <td align="center" bgcolor="#F2F2F2">55.00 %</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <p
+                    style="    display: block;    overflow: hidden;    width: 100%; box-shadow: none;   height:30px;    margin: 0;">
+            </p>
+            <div style="text-align:center;"><span class="daili">代 理 加 盟</span></div>
+        </div>
+
+
+    </div>
+    <div class="_3KpKZIafGGjsC-PJLoZVYL" id="appDownload"
+         style="opacity: 1; animation: _3D5UhZ4SNsFx2wyAfPJzw5 1s forwards;">
+        <h2>极致流畅，触手可及</h2>
+        <h3>全球首家一体化娱乐原生APP</h3>
+        <div style="width:1200px; margin:0 auto; position:relative">
+            <div class="_1jllwP-Fwk88SIMRUXmn2g">
+                <img src="./static/app.png"/>
+            </div>
+            <div>
+                <h4>最佳赔率、创新多元玩法</h4>
+                <h5>随时随地 极致畅享</h5>
+                <p><span style="color:#f00; font-size:24px;">每月平均提供约5,000场现场滚球赛事。</span><br>
+                    • 提供超过400个不同联赛的足球赛事。除了常见的职业联赛外，还提供其他联赛，如：希甲/意大
+                    利C联赛杯/波甲/俄甲/克罗地亚杯/保加利亚杯/挪威杯/德甲/罗乙/丹麦甲/法国乙/泰国国王杯/赛
+                    浦路斯杯/巴西B联赛/日本甲/韩国甲/阿根廷甲 ... ... 还有更多赛事供您选择！首创「提前兌現」功能。<br>
+                    • 以往玩家需要等到游戏结束才可兑现，IM平台首推提前兑现，不需要等到游戏结束，就可以提前
+                    兑现，相当方便！</p><span class="daili">代 理 加 盟</span>
+            </div>
+
+        </div>
+    </div>
+    <div class="hN5oJbeDkKnrMy87_3DIY" id="wonderfulGame"
+         style="opacity: 1; animation: _3D5UhZ4SNsFx2wyAfPJzw5 1s forwards;">
+        <h2>{{.title}}精彩游戏</h2>
+        <h3>汇聚当下最热门的游戏</h3>
+        <div class="_1-SO3X7xTPcfAfr96wJJS8">
+            <div class="_1o2s1geNwWcfvymfzbsIM_" id="im" style="transform: translateY(0px);">
+                <h3>{{.title}}</h3>
+                <p>{{.title}}是权威体育互动平台，业内公认滚球专家。日供万场精彩赛事，覆盖全球多元化玩法，闪存秒提，尽显极致娱乐体验！</p>
+                <span>代 理 加 盟</span>
+            </div>
+            <div class="_2atnZYxhXNLfs1qz8XN77e" id="gd" style="transform: translateY(0px);">
+                <h3>IM体育</h3>
+                <p>IM体育是精准体育投注平台，创新领先体育赛事投注。每日精彩赛事不断，玩法灵活多变，尽享完美娱乐体验！</p>
+                <span>代 理 加 盟</span>
+            </div>
+            <div class="_3XEfnT2m437xgpLobAd0M" id="bl" style="transform: translateY(0px);">
+                <h3>博乐棋牌</h3>
+                <p>博乐棋牌是一款地道正宗棋牌麻将游戏，完美延续多元地域形式，突破麻将经典娱乐玩法，万人同台真实竞技，畅享麻将乐趣。</p>
+                <span>代 理 加 盟</span>
+            </div>
+        </div>
+        <div class="_3P08Y76t2JRk52zopWfQJj" id="lotteryLive" style="transform: translateY(0px);"><img
+                    src="./static/real_people.png" class="_1o2s1geNwWcfvymfzbsIM_"><img class="_2atnZYxhXNLfs1qz8XN77e"
+                                                                                    src="./static/chess.png"></div>
+        <div class="_1ZLZaVvfqve4AZ0x2d443P" id="sport" style="transform: translateY(0px);"><img
+                    src="./static/caipiao.png" class="_1HHewkpPllpFembrkww5K_"><img src="./static/dz_youyi.png"
+                                                                                    class="UIuf_Ihiny7tRJ8HwP9ZV"><img
+                    src="./static/dz_jinji.png" class="_2agr2eaJimIrGPMYQNE6GL"></div>
+    </div>
+
+</div>
+<div class="_3-v1fe-A6Puxup2EK67vG0">
+    <div class="_2z69t1hFkY5vxXFb809ynO"><span class="Zgl_FMkHJKrW-kDQc-ikF"></span><span
+                class="_2w0NDUfop6s1EJCGVYQ67H"></span><span class="_2_6sHhdDcP1s5BbJdhQ_3d"></span><span
+                class="_2aRFM8MaGbT3ZP_ylUyXJ7"></span><span class="_3vSrmqEl9ydtOvMluXrWg0"></span><span
+                class="_3sYrWXLSvzTGJgK21ANb9W"></span><span class="_36Lw9g3EBsUDjsNrjVe5-r"></span><span
+                class="_1CZ6MZ3eJ7ByteUHwpwmYg"></span><span class="_1KPkeY3ZLLM8d-WusSehuq"></span><span
+                class="_1TFEobp5Ai0mMhICNlBLIn"></span></div>
+    <p>{{.title}}拥有欧洲马耳他博彩管理局（MGA）英国GC监督委员会（Gambling
+        Commission）和菲律宾政府博彩委员会（PAGCOR）颁发的合法牌照。注册于<br>英属维尔京群岛，是受国际博彩协会认可的合法博彩公司。进行注册并娱乐前，请确保您年满18周岁！</p>
+    <div class="_2myfiIoxEvsRvHJnrpK5wz">
+        <div>
+            <div></div>
+            <span>英国GC监督委员会</span>
+        </div>
+        <div>
+            <div></div>
+            <span>马耳他博彩牌照(MGA)认证</span>
+        </div>
+        <div>
+            <div></div>
+            <span>英属维尔京群岛(BVI)认证</span>
+        </div>
+        <div>
+            <div></div>
+            <span>菲律宾(PAGCOR)监督博彩牌照</span>
+        </div>
+    </div>
+    <div class="_2C9k195V8gWzpe-8daHIl2"><span
+                class="ZiZmitztlkJWyIdnDK8yB">新手帮助</span><span>博彩责任</span><span>隐私保护</span><span>规则条款</span><span>联系我们</span><span>合营计划</span>
+    </div>
+    <p>版权所有 ©2018-2020{{.title}} 保留所有权</p>
+</div>
+
+<div id="onlinebox" class="onlinebox" style="position: fixed; top: 100px; bottom: auto; right: 10px; left: auto;"
+     m-type="online" m-id="online">
+    <div class="onlinebox-open" id="onlinebox-open" style="background:#ffdb60;"><i class="fa fa-comments-o"></i></div>
+    <div class="onlinebox-box font-size-14">
+        <div class="onlinebox-top">
+            <div class="onlinebox-top-btn"><a href="javascript:;" class="onlinebox-close"
+                                              onclick="document.getElementById('onlinebox').style.display='none'">x</a>
+            </div>
+            <h4 class="editable-click h5" met-id="17" met-table="language" met-field="value">加盟咨询</h4>
+        </div>
+        <div class="onlinebox-center list-group">
+            <li class="list-group-item border-none">
+                <!--<p class="met_qq list-group-item-text mb-0"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=421793397&amp;site=qq&amp;menu=yes" target="_blank"><i class="fa fa-qq"></i><span>招商咨询</span></a></p>-->
+            </li>
+        </div>
+        <div class="onlinebox-bottom">
+            <p>QQ咨询：</p>
+            <p><a href="http://wpa.qq.com/msgrd?v=3&amp;uin={{.qq_number}}&amp;site=qq&amp;menu=yes"
+                  target="_blank">{{.qq_number}}</a>
+            </p>
+            <p><br></p>
+
+
+            <p>小飞机：</p>
+            <p><a href="javascript:" target="_blank" style="color:#62a8ea;">{{.telegram_number}}</a></p>
+            <p><br>
+
+            </p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+
+</html>
