@@ -1,0 +1,138 @@
+/*!
+ * @名称：base.css
+ * @功能：1、重设浏览器默认样式
+ *       2、设置通用原子类
+ */
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+* {
+  font-family: Arial, 'Microsoft YaHei' !important;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+html,
+body {
+  font-family: Arial, 'Microsoft YaHei';
+  background: #f0f2f5;
+  color: #333333;
+  min-width: 1200px;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+h1 {
+  line-height: 76px;
+  padding-left: 32px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.85);
+  border-bottom: 1px solid #f0f2f5;
+}
+
+h1 > p {
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #697b8c;
+  margin: 0;
+}
+h1 > p > span {
+  cursor: pointer;
+  margin-right: 40px;
+  display: inline-block;
+}
+h1 > p > span:hover {
+  opacity: 0.8;
+}
+h1 > p > span.active {
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+  position: relative;
+}
+h1 > p > span.active::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: #597ef7;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+}
+h1 > p > span.active:hover {
+  opacity: 1;
+}
+
+h1 > span {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+p.tips {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.65);
+  height: 40px;
+  line-height: 40px;
+  padding-left: 38px;
+  border-radius: 4px;
+  border: solid 1px #597ef7;
+  background: url('/assets/icon-prompt.svg') no-repeat 16px 13px #f0f4ff;
+  margin: -10px 0 7px;
+}
+
+p.tips span {
+  color: #597ef7;
+  display: inline-block;
+  padding: 0 3px;
+  cursor: pointer;
+}
+
+input:focus,
+button:focus {
+  outline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+::-webkit-input-placeholder {
+  color: #ddd;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #ddd;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ddd;
+}
+:-ms-input-placeholder {
+  color: #ddd;
+}
+
+.ant-table-placeholder {
+  height: 0;
+  overflow: hidden;
+  border-bottom: 0;
+}
+
+.ant-carousel .slick-dots li button {
+  width: 35px;
+  height: 5px;
+}
+.ant-carousel .slick-dots-bottom {
+  bottom: 30px;
+}
+
+.ant-radio-wrapper span {
+  white-space: normal !important;
+  font-size: 12px;
+}
