@@ -91,6 +91,7 @@ html, body {
 .logo_two {
 	display: inline-block;
 	width: 239px;
+	height: 150px;
 	margin-bottom: 20px
 }
 #qrcode {
